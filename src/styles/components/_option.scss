@@ -1,0 +1,26 @@
+.item {
+  position: relative;
+  padding: 20px;
+  width: 93%;
+  border-bottom: 1px solid #eee;
+}
+
+.item:hover .remove-btn {
+  opacity: 1;
+}
+
+.remove-btn {
+    position: absolute;
+    top: 26px;
+    right: 20px;
+    background: #f44336;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: 300;
+    opacity: 0;
+    cursor: pointer;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
