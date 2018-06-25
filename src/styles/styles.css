@@ -81,12 +81,12 @@ button:disabled {
   width: 93%;
   border-bottom: 1px solid #eee; }
 
-.item:hover .remove-btn {
+.item:hover .remove-btn, .item:hover .btn-cancel, .item:hover .btn-update {
   opacity: 1; }
 
-.remove-btn {
+.remove-btn, .btn-cancel, .btn-update {
   position: absolute;
-  top: 26px;
+  top: 30px;
   right: 20px;
   background: #f44336;
   border: none;
@@ -98,6 +98,14 @@ button:disabled {
   -webkit-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s; }
+
+.btn-cancel, .btn-update {
+  top: 17px;
+  opacity: 1; }
+
+.btn-update {
+  background: #27ae60;
+  right: 100px; }
 
 .remove-all-btn {
   background: #f44336;

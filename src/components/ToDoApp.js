@@ -39,6 +39,9 @@ export default class ToDoApp extends React.Component {
     }));
   };
 
+  updateOptionHandler = (option) => {
+    console.log(option);
+  }
 
   //For load item from localstorage in client side
   componentWillMount() {
@@ -74,7 +77,8 @@ export default class ToDoApp extends React.Component {
             optionsLength={this.state.options.length} />
           <Options
             options={this.state.options}
-            deleteOptionHandler={this.deleteOptionHandler} />
+            deleteOptionHandler={this.deleteOptionHandler}
+            updateOptionHandler={this.updateOptionHandler} />
         </div>
       </div>
     );

@@ -10,17 +10,29 @@
 }
 
 .remove-btn {
-    position: absolute;
-    top: 26px;
-    right: 20px;
-    background: #f44336;
-    border: none;
-    color: #fff;
-    padding: 5px 10px;
-    font-weight: 300;
-    opacity: 0;
-    cursor: pointer;
-    -webkit-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  background: #f44336;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: 300;
+  opacity: 0;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
+.btn-cancel {
+  @extend .remove-btn;
+  top: 17px;
+  opacity: 1;
+}
+
+.btn-update {
+  @extend .btn-cancel;
+  background: #27ae60;
+  right: 100px;
 }
