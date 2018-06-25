@@ -69,11 +69,12 @@ export default class ToDoApp extends React.Component {
         <Header />
         <div className="container">
           <AddOption addOptionHandler={this.addOptionHandler} />
-          <RemoveAllOptions 
-            deleteOptionsHandler={this.deleteOptionsHandler}/>
-          <Options 
+          <RemoveAllOptions
+            deleteOptionsHandler={this.deleteOptionsHandler}
+            optionsLength={this.state.options.length} />
+          <Options
             options={this.state.options}
-            deleteOptionHandler={this.deleteOptionHandler}/>
+            deleteOptionHandler={this.deleteOptionHandler} />
         </div>
       </div>
     );
