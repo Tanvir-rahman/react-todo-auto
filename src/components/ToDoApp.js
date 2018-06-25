@@ -39,8 +39,24 @@ export default class ToDoApp extends React.Component {
     }));
   };
 
-  updateOptionHandler = (option) => {
-    console.log(option);
+  //To Update current option
+  updateOptionHandler = (option, previousOption) => {
+    const optionIndex = this.state.options.indexOf(option);
+    const previousOptionIndex = this.state.options.indexOf(previousOption);
+
+    if (!option) {
+      return 'Enter a valid Option';
+    }
+
+    else if (optionIndex > -1) {
+      return 'Similar Option already added';
+    }
+
+
+    const arr = [...this.state.options];
+    arr[previousOptionIndex] = option;
+
+    this.setState({ options: arr });
   }
 
   //For load item from localstorage in client side
@@ -60,7 +76,9 @@ export default class ToDoApp extends React.Component {
 
   //For update in localstorage with options list update
   componentDidUpdate(prevProps, prevState) {
-    if (this.state.options.length !== prevState.options.length) {
+
+    console.log('1');
+    if (JSON.stringify(this.state.options.length) === JSON.stringify(prevState.options.length)) {
       const json = JSON.stringify(this.state.options);
       localStorage.setItem('options', json);
     }

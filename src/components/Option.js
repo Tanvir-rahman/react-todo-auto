@@ -14,7 +14,8 @@ class Option extends React.Component {
   updateOptionHandler = (e) => {
     e.preventDefault();
     const option = e.target.elements.option.value.trim();
-    const error = this.props.updateOptionHandler(option);
+    const previousOption = this.props.optionText;
+    const error = this.props.updateOptionHandler(option, previousOption);
     this.viewHandler();
   };
 
