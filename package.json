@@ -10,6 +10,8 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
@@ -19,9 +21,10 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "homepage": "http://Tanvir-rahman.github.io/react-todo-auto",
+  "description": "A ToDo app in React",
   "main": "index.js",
   "devDependencies": {},
-  "author": "",
+  "author": "Tanvir Rahman",
   "license": "MIT"
 }
